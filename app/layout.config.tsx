@@ -10,6 +10,7 @@ import SummitLondonBanner from '@/public/nav-banner/avalanche_summit_london.png'
 import HackathonLondonBanner from '@/public/nav-banner/hackathon_luma.png';
 import Team1Banner from '@/public/nav-banner/local_events_team1.jpg';
 import L1LauncherPreview from '@/public/nav-banner/l1-launcher-preview.png';
+import { SearchButton } from '@/components/ui/search-button';
 
 export const integrationsMenu: LinkItemType = {
     type: 'menu',
@@ -418,8 +419,11 @@ export const baseOptions: BaseLayoutProps = {
         {<AvalancheLogo className="size-7" fill="currentColor" />}
         <span style={{ fontSize: "large" }}>Builders Hub</span>
       </>
-    )
+    ),
+    enableSearch: true,
+    children: <SearchButton />
   },
+  
   links: [
     docsMenu,
     academyMenu,
